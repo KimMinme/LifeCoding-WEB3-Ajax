@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- 페이지에서 'four' 링크를 누르면 4번째 문단으로 감 -->
+        <a href="#four">four</a>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At impedit ipsa sequi odit velit voluptatem debitis veritatis saepe eligendi consequatur asperiores cupiditate cum laboriosam provident, ab odio reprehenderit. Aut ad minima, recusandae maiores facilis expedita sed perspiciatis officia porro quo voluptatum laborum aliquid commodi exercitationem culpa modi hic odit placeat ea voluptatibus labore iure neque ratione vero. Ut sequi, harum excepturi error reiciendis soluta recusandae quam debitis assumenda natus in, vitae mollitia beatae voluptatem! Odit, corporis ipsam cumque eum voluptas, repudiandae, eligendi excepturi aspernatur optio id voluptatum. Explicabo voluptatibus odio facere corrupti quam, suscipit fuga, distinctio harum beatae mollitia similique?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem est doloremque alias itaque facere recusandae voluptas aliquid asperiores ipsa blanditiis. Quo, soluta consequuntur! Animi, perferendis architecto sit excepturi atque obcaecati quasi quo magni explicabo ullam non ad aspernatur temporibus corrupti dolore minus optio odit dignissimos commodi eligendi sint sed aut! Beatae quidem omnis facere nam molestias! Fuga quisquam commodi, a vitae dolorem optio eius eaque hic at voluptatibus accusantium tempora aut, asperiores consequatur impedit praesentium recusandae repudiandae officia aspernatur quidem quo voluptates alias. Obcaecati, soluta dolore aperiam cupiditate voluptas nostrum libero dolor! Officia facilis tempora reiciendis numquam assumenda perspiciatis distinctio!
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolorem praesentium labore hic amet, voluptatem odit fugiat officiis dicta recusandae tempore quia repellat laudantium nisi iusto provident delectus odio dolorum ullam aspernatur. Perferendis, commodi dolorum odio non, quia exercitationem laborum consequuntur vero dolor atque labore obcaecati. Unde voluptas vel nesciunt aspernatur magnam, quam neque in quas illo expedita libero necessitatibus id alias architecto, doloribus obcaecati earum harum. Nesciunt deleniti omnis quod explicabo delectus? Dicta, aut fugit quas accusamus voluptatum consequuntur adipisci praesentium asperiores, iusto veniam quia nostrum quis sit! Nisi quia perferendis, voluptatibus voluptatem ratione amet dolor minus illo possimus?
+        </p>
+        <!-- id는 fragment identifier임 -->
+        <!-- 접근은 #(hash)로 함 -->
+        <p id="four">
+            <!-- fragment -->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut exercitationem suscipit optio veniam sint molestiae aspernatur officia deleniti ipsa beatae nisi dicta necessitatibus, maiores, dignissimos praesentium placeat tempora modi neque totam! Illum, amet magni? Quasi necessitatibus consectetur odit ea, vitae, et modi harum, qui reprehenderit pariatur eaque consequuntur voluptatum. Inventore deleniti nostrum, repellendus maiores aut incidunt cupiditate! Fuga perspiciatis incidunt itaque maxime cumque voluptatum quisquam ab! Magnam maiores fuga reiciendis, quos ut quisquam, suscipit a eveniet modi, commodi aperiam corporis? Perspiciatis quaerat blanditiis aspernatur sint consequuntur commodi ipsum, animi perferendis sunt error necessitatibus unde sit excepturi deleniti, quibusdam veniam fugiat!
+        </p>
+        <script>
+            if(location.hash){
+                // hash 값이 있다면, '#' 뒤에 있는 문자열을 출력함
+                console.log(location.hash.substring(1));
+            }
+        </script>
+    </body>
+</html>
