@@ -6,6 +6,7 @@
         </article>
         <input type="button" value="fetch" onclick="
             // fetch의 인자는 서버에 요청할 파일
+            // then은 앞의 작업이 끝나면 비동기적으로 콜백을 호출함
             fetch('html').then(function(response){
                 response.text().then(function(text){
                     // text에 서버가 응답한 데이터가 저장됨
@@ -14,6 +15,14 @@
                     document.querySelector('article').innerHTML = text;
                 })
             })
+            // Asynchronous
+            function callbackme(){
+                console.log('response end');
+            }
+            fetch('html').then(callbackme);
+            console.log(1);
+            console.log(2);
+            // 1과 2가 순서대로 출력되고 비동기적으로 'response end'가 출력됨
         ">
     </body>
 </html>
