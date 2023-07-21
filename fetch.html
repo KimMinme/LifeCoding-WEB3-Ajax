@@ -7,6 +7,7 @@
         <input type="button" value="fetch" onclick="
             // fetch의 인자는 서버에 요청할 파일
             // then은 앞의 작업이 끝나면 비동기적으로 콜백을 호출함
+            // 콜백 함수에 이름이 없는데, 이를 익명(Anonymous) 함수라고 부름
             fetch('html').then(function(response){
                 response.text().then(function(text){
                     // text에 서버가 응답한 데이터가 저장됨
@@ -16,10 +17,15 @@
                 })
             })
             // Asynchronous
-            function callbackme(){
-                console.log('response end');
-            }
-            fetch('html').then(callbackme);
+            // fetch API는 콜백의 첫 번째 인자로 response 객체를 줌
+            fetch('javascript').then(function(response){
+                // response 객체의 status 속성을 가져옴
+                console.log(response.status);
+                // response.status가 404일 때, 'Not Found'창 띄움
+                if(response.status == '404'){
+                    alert('Not Found');
+                }
+            });
             console.log(1);
             console.log(2);
             // 1과 2가 순서대로 출력되고 비동기적으로 'response end'가 출력됨
