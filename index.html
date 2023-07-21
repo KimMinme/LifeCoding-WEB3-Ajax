@@ -14,31 +14,29 @@
   <ol>
     <li><a onclick="
       // fetch API로 'html' 파일을 가져와 삽입함
-      fetch('html').then(function(response){
-        response.text().then(function(text){
-          document.querySelector('article').innerHTML = text;
-        })
-      })
+      fetchPage('html');
     ">HTML</a></li>
     <li><a onclick="
       // fetch API로 'css' 파일을 가져와 삽입함
-      fetch('css').then(function(response){
-        response.text().then(function(text){
-          document.querySelector('article').innerHTML = text;
-        })
-      })
+      fetchPage('css');
     ">CSS</a></li>
     <li><a onclick="
       // fetch API로 'javascript' 파일을 가져와 삽입함
-      fetch('javascript').then(function(response){
-        response.text().then(function(text){
-          document.querySelector('article').innerHTML = text;
-        })
-      })
+      fetchPage('javascript');
     ">JavaScript</a></li>
   </ol>
   <article>
     <!-- 글이 생성될 곳 -->
   </article>
+  <script>
+    // 함수로써 리팩토링함
+    function fetchPage(name){
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    }
+  </script>
 </body>
 </html>
