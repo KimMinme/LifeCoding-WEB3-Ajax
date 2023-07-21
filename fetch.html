@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <article>
+            <!-- 글이 생성될 곳 -->
+        </article>
+        <input type="button" value="fetch" onclick="
+            // fetch의 인자는 서버에 요청할 파일
+            fetch('html').then(function(response){
+                response.text().then(function(text){
+                    // text에 서버가 응답한 데이터가 저장됨
+                    alert(text);
+                    // text를 article 태그에 삽입
+                    document.querySelector('article').innerHTML = text;
+                })
+            })
+        ">
+    </body>
+</html>
