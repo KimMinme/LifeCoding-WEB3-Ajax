@@ -11,25 +11,10 @@
   <input id="night_day" type="button" value="night" onclick="
     nightDayHandler(this);
   ">
-  <ol>
-    <!-- #!(hash bang)을 넣음으로써 
-      각 항목에 링크를 달음 -->
-    <!-- 그냥 #(hash)를 사용하지 않는 이유는 
-      #(hash)가 본래 특정 부분을 구분하기 위한 
-      것인데, 아래의 경우에 그런 목적이 아니기
-      때문임 -->
-    <li><a href="#!html" onclick="
-      // fetch API로 'html' 파일을 가져와 삽입함
-      fetchPage('html');
-    ">HTML</a></li>
-    <li><a href="#!css" onclick="
-      // fetch API로 'css' 파일을 가져와 삽입함
-      fetchPage('css');
-    ">CSS</a></li>
-    <li><a href="#!javascript" onclick="
-      // fetch API로 'javascript' 파일을 가져와 삽입함
-      fetchPage('javascript');
-    ">JavaScript</a></li>
+  <ol id="nav">
+    <!-- 데이터(list 파일)와 로직을 
+      분리함으로써 관리성을 높임 -->
+    <!-- list 파일이 들어올 곳 -->
   </ol>
   <article>
     <!-- 글이 생성될 곳 -->
@@ -41,7 +26,7 @@
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
-      })
+      });
     }
     /* onclick에 의한 페이지 접근이 아닌, url에 의한
       페이지 접근일 때도 페이지를 보여주도록 함 */
@@ -53,6 +38,12 @@
       // hash 값이 없을 때, default로 welcome 파일을 불러옴
       fetchPage('welcome');
     }
+    // list 파일을 가져와서 id가 'nav'인 곳에 삽입함
+    fetch('list').then(function(response){
+      response.text().then(function(text){
+        document.querySelector('#nav').innerHTML = text;
+      })
+    });
   </script>
 </body>
 </html>
