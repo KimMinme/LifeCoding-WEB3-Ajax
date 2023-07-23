@@ -1,18 +1,1 @@
-<!-- #!(hash bang)을 넣음으로써 
-      각 항목에 링크를 달음 -->
-    <!-- 그냥 #(hash)를 사용하지 않는 이유는 
-      #(hash)가 본래 특정 부분을 구분하기 위한 
-      것인데, 아래의 경우에 그런 목적이 아니기
-      때문임 -->
-    <li><a href="#!html" onclick="
-      // fetch API로 'html' 파일을 가져와 삽입함
-      fetchPage('html');
-    ">HTML</a></li>
-    <li><a href="#!css" onclick="
-      // fetch API로 'css' 파일을 가져와 삽입함
-      fetchPage('css');
-    ">CSS</a></li>
-    <li><a href="#!javascript" onclick="
-      // fetch API로 'javascript' 파일을 가져와 삽입함
-      fetchPage('javascript');
-    ">JavaScript</a></li>
+html, css, javascript, ajax
